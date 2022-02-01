@@ -1,0 +1,249 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+
+  
+
+}
+
+/* css variable */
+:root{
+    --navbar-height: 59px
+}
+/* Navigation bar: logo and image */
+#logo{
+    margin: 14px 24px;
+}
+
+#logo img{
+    height: 68px;
+    margin: 6px 10px;
+    
+}
+
+/* Navigation bar: logo and image */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    /* height: 20vh;
+    width: 100vw; */
+    top: 0px;
+    left: 0px;
+}
+#navbar ul{
+    display: flex;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: larger;
+    
+}
+#navbar ul li a{
+    display: block;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 2s ease ;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    position: relative;
+
+}
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 530px;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+}
+#home::before{
+    content: "";
+    background-color: black;
+    background: url('./Img/bg3.png') no-repeat center center/cover;
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.85;
+}
+#home h2{
+    color:#95ffbe;
+    text-align: center;
+}
+#home p{
+    color:#0d1111;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* services section */
+#services{
+    margin: 25px;
+    display: flex;
+    
+    /* flex-direction:row; */
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+#services .box{
+    /* width: 25%;
+    height: 250px; */
+    border: 2px solid black;
+    margin: 3px 6px;
+    padding: 34px;
+    background-color: #d3deda;
+    border-radius: 25px;
+    
+}
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+/* utility class */
+.h-primary{
+    color: black;
+    font-size: 3.2rem;
+    padding: 12px;
+
+}
+.h-secondary{
+    font-size: 1.8rem;
+    padding: 12px;
+
+}
+
+.btn{
+    padding: 6px 25px;
+    border: 2px solid white;
+    background-color: rgb(10, 10, 10);
+       color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    margin: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: all 2s ease ; */
+}
+.btn:hover{
+    color: #000000;
+    background-color: #ffffff;
+    position: relative;
+    animation: kiran 2s ease 0s 1 both;
+    animation-play-state: running;
+    
+    /* transform: translate(10px,10px); */
+}
+@keyframes kiran {
+    from{
+        background-color: rgb(10, 10, 10);
+        color: rgb(255, 255, 255);
+        
+    }
+    to{
+       color: #000000;
+       background-color: #ffffff;
+
+   }
+}
+.center{
+    text-align: center;
+}
+/* Clients section */
+#client-img::before{
+    content: "" ;
+    background-color: black;
+    background: url('https://www.caterpillartobutterflyentrepreneurship.com/wp-content/uploads/2020/10/clients.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 53%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#client-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#client-img img{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+
+}
+/* Contact us section */
+#contact::before{
+    content: "";
+    background-color: black;
+    background: url('https://wallpaperaccess.com/full/3124570.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.75;
+
+}
+@media only screen and (min-width: 2700px){
+    #navbar {
+        width: 100vw;
+    }
+    #contact::before{
+        height: 40%;
+    }
+}
+input{
+    height: 30px;
+    width: 50%;
+    border-radius: 8px;
+}
+input::placeholder{
+    font-size: large;
+    font-style: bold;
+    text-align: center;
+}
+textarea{
+    height: 80px;
+    width: 50%;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+textarea::placeholder{
+    
+    font-size: 30px;
+    font-style: bold;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 2px 5px;
+}
